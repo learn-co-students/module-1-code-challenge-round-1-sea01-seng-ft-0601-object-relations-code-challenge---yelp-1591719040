@@ -1,33 +1,27 @@
 class Customer
-  attr_accessor :given_name, :family_name
-  @@all =[]
-
-  def initialize(given_name, family_name)
-    @given_name = given_name
-    @family_name  = family_name
-    @@all << self 
+  attr_accessor :first_name, :last_name
+  @@all = []
+  
+  def initialize(first_name, last_name)
+    @first_name = first_name 
+    @last_name = last_name
+    @@all << self
   end
 
-  def given_name
-      @given_name
+  def first_name
+    @first_name = first_name
   end
 
-  def family_name
-    @family_name
-  end 
-
+  def last_name
+    @last_name = last_name
+  end
+  
   def full_name
-    "#{given_name} #{family_name}"
+    "#{first_name} #{last_name}"
   end
 
   def self.all
     @@all
-  end 
-
-  # def self.find_by_name(full_name)
-  #   Review.select { |review| review == full_name \\\}
-  # end 
-  # binding.pry
-
+  end
 
 end
